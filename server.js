@@ -46,5 +46,5 @@ fs.readFile('client/index.html', function (err, html) {
     }).listen(8000);
 });
 
-console.log('Listening on 8080');
-app.listen(8080);
+console.log('Listening on 8000');
+app.listen(8000);
