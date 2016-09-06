@@ -35,10 +35,7 @@ app.get('/getParams', function (req, res) {
     
 });
 
-fs.readFile('client/index.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
+fs.readFile('client/index.html', function (err, html) {  
     http.createServer(function(request, response) {  
         response.writeHeader(200, {"Content-Type": "text/html"});  
         response.write(html);  
