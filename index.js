@@ -16,7 +16,7 @@ app.get('/', function (request, response) {
     response.render('pages/index');
 });
 
-app.get('/getParams', function (request, response) {
+app.get('/getParams', function (req, res) {
     var query = require('url').parse(req.url, true).query;
 
     var text = query.text;
