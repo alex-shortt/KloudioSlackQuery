@@ -19,6 +19,11 @@ app.use(express.static(__dirname + '/client'))
 app.get('/searchTrack', function(req, res) {
   res.setHeader('Access-Control-Allow-Origin', 'http://www.alexshortt.com');
   res.setHeader('Access-Control-Allow-Origin', 'www.alexshortt.com');
+    
+  res.send(JSON.stringify({
+      text: "hello"
+  }, null, 3));
+    return;
   var query = require('url').parse(req.url, true).query;
 
   var response_url = query.response_url;
