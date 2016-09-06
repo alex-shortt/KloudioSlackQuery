@@ -21,6 +21,10 @@ app.get('/getParams', function (req, res) {
 
     var text = query.text;
     console.log(text);
+     res.send(JSON.stringify({
+        text: text
+      }, null, 3));
+      return;
 });
 
 app.listen(app.get('port'), function () {
