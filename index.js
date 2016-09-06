@@ -9,12 +9,17 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', function(request, response) {
-  response.render('pages/index');
+app.get('/', function (request, response) {
+    response.render('pages/index');
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+app.get('/getParams', function (request, response) {
+    var query = require('url').parse(req.url, true).query;
+
+    var text = query.text;
+    console.log(text);
 });
 
-
+app.listen(app.get('port'), function () {
+    console.log('Node app is running on port', app.get('port'));
+});
